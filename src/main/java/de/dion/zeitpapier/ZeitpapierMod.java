@@ -67,7 +67,7 @@ public final class ZeitpapierMod {
                             data.set(day, night);
                             ctx.getSource().sendSuccess(() -> Component.literal("Gespeichert: Tag " + day + " Sekunden, Nacht " + night + " Sekunden."), true);
                             return 1;
-                        })))))
+                        }))))
             .then(Commands.literal("info").executes(ctx -> {
                 TimeSettings data = TimeSettings.get(ctx.getSource().getServer().overworld());
                 ctx.getSource().sendSuccess(() -> Component.literal("Aktuell: Tag " + data.daySeconds() + " Sekunden, Nacht " + data.nightSeconds() + " Sekunden."), false);
