@@ -1,0 +1,33 @@
+name: Zeitpapier JAR bauen
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Projekt laden
+        uses: actions/checkout@v4
+
+      - name: Java 17 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - name: Gradle freigeben
+        run: chmod +x gradlew
+
+      - name: Mod bauen
+        run: ./gradlew clean build --stacktrace
+
+      - name: Fertige Mod bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zeitpapier-Forge-1.20.1-47.4.20
+          path: build/libs/*.jar
+          if-no-files-found: error
