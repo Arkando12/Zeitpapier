@@ -1,0 +1,9 @@
+1. Auf GitHub ein neues Repository mit dem Namen Zeitpapier-Mod erstellen.
+2. Dieses ZIP auf dem PC entpacken.
+3. In GitHub auf "uploading an existing file" beziehungsweise "Add file" -> "Upload files" klicken.
+4. ALLE entpackten Dateien und Ordner in das Upload-Feld ziehen.
+5. Unten auf "Commit changes" klicken.
+6. Oben den Reiter "Actions" oeffnen.
+7. Den Lauf "Zeitpapier JAR bauen" abwarten.
+8. Den fertigen Lauf oeffnen und unten das Artefakt "Zeitpapier-Forge-1.20.1-47.4.20" herunterladen.
+9. Das heruntergeladene Artefakt entpacken. Darin liegt die installierbare JAR.
